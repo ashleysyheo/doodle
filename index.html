@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.tablesorter.min.js"></script>   
+        <script>
+            (function() {
+                var arrFavicon = ['favicon/1.ico', 'favicon/2.ico', 'favicon/3.ico', 'favicon/4.ico', 'favicon/5.ico',
+                                    'favicon/6.ico', 'favicon/7.ico', 'favicon/8.ico', 'favicon/9.ico', 'favicon/10.ico', 
+                                    'favicon/11.ico', 'favicon/12.ico', 'favicon/13.ico', 'favicon/14.ico', 'favicon/15.ico',
+                                    'favicon/16.ico', 'favicon/17.ico', 'favicon/18.ico', 'favicon/19.ico', 'favicon/20.ico',
+                                    'favicon/21.ico', 'favicon/22.ico', 'favicon/23.ico', 'favicon/24.ico', 'favicon/25.ico', 
+                                    'favicon/26.ico', 'favicon/27.ico', 'favicon/28.ico', 'favicon/29.ico', 'favicon/30.ico',
+                                    'favicon/31.ico', 'favicon/32.ico', 'favicon/33.ico', 'favicon/34.ico', 'favicon/35.ico', 
+                                    'favicon/36.ico', 'favicon/37.ico', 'favicon/38.ico', 'favicon/39.ico', 'favicon/40.ico', 
+                                    'favicon/41.ico', 'favicon/42.ico', 'favicon/43.ico', 'favicon/44.ico', 'favicon/45.ico', 
+                                    'favicon/46.ico', 'favicon/47.ico', 'favicon/48.ico', 'favicon/49.ico', 'favicon/50.ico']; 
+
+                var link = document.createElement('link');
+                link.type = 'image/x-icon';
+                link.rel = 'shortcut icon';
+                link.href = arrFavicon[Math.floor(Math.random()*arrFavicon.length)]; 
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }());
+        </script>     
+
+        <title>doodle</title>
+    </head>
+    <body>
+        <main>
+            <div class="desc">
+                <h3 id="nothing" onclick="removeSvg(this)" onmouseover="this.innerHTML='nothing';" onmouseout="this.innerHTML='doodle';">
+                    doodle
+                </h3>
+                <div id="image">
+                    <iframe id="image-link" src=""></iframe>
+                </div>
+                <div class="lists">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NO.</th>
+                                <th>COLOUR</th>
+                                <th>HEX CODE</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="show-image" id="no1" onclick="showImage(0)">
+                                <td>1</td>
+                                <td>Aero Blue</td>
+                                <td>#AEFBC4</td>
+                            </tr>
+
+                            <tr class="show-image" id="no2" onclick="showImage(1)">
+                                <td>2</td>
+                                <td>Amour</td>
+                                <td>#EFCBEF</td>
+                            </tr>
+
+                            <tr class="show-image" id="no3" onclick="showImage(2)">
+                                <td>3</td>
+                                <td>Anakiwa</td>
+                                <td>#A8E9FD</td>
+                            </tr>
+
+                            <tr class="show-image" id="no4" onclick="showImage(3)">
+                                <td>4</td>
+                                <td>Apricot</td>
+                                <td>#E87979</td>
+                            </tr>
+
+                            <tr class="show-image" id="no5" onclick="showImage(4)">
+                                <td>5</td>
+                                <td>Apricot Peach</td>
+                                <td>#FBD7BA</td>
+                            </tr>
+
+                            <tr class="show-image" id="no6" onclick="showImage(5)">
+                                <td>6</td>
+                                <td>Aquamarine</td>
+                                <td>#70FAB1</td>
+                            </tr>
+
+                            <tr onclick="showImage(6)" id="no7">
+                                <td>7</td>
+                                <td>Azure Radiance</td>
+                                <td>#118CF0</td>
+                            </tr>
+
+                            <tr onclick="showImage(7)" id="no8">
+                                <td>8</td>
+                                <td>Bittersweet</td>
+                                <td>#FD6E6E</td>
+                            </tr>
+
+                            <tr onclick="showImage(8)"  id="no9">
+                                <td>9</td>
+                                <td>Blue Ribbon</td>
+                                <td>#016FFE</td>
+                            </tr>
+
+                            <tr onclick="showImage(9)"  id="no10">
+                                <td>10</td>
+                                <td>Bright Turquoise</td>
+                                <td>#06E2EA</td>
+                            </tr>
+
+                            <tr onclick="showImage(10)"  id="no11">
+                                <td>11</td>
+                                <td>Candlelight</td>
+                                <td>#FBDA1C</td>
+                            </tr>
+
+                            <tr onclick="showImage(11)"  id="no12">
+                                <td>12</td>
+                                <td>Carnation</td>
+                                <td>#F45E68</td>
+                            </tr>
+
+                            <tr onclick="showImage(12)"  id="no13">
+                                <td>13</td>
+                                <td>Classic Rose</td>
+                                <td>#FBD0DD</td>
+                            </tr>
+
+                            <tr onclick="showImage(13)"  id="no14">
+                                <td>14</td>
+                                <td>Conifer</td>
+                                <td>#98E95E</td>
+                            </tr>
+
+                            <tr onclick="showImage(14)"  id="no15">
+                                <td>15</td>
+                                <td>Cosmos</td>
+                                <td>#FECECD</td>
+                            </tr>
+
+                            <tr onclick="showImage(15)"  id="no16">
+                                <td>16</td>
+                                <td>Cotton Candy</td>
+                                <td>#FFB4C9</td>
+                            </tr>
+
+                            <tr onclick="showImage(16)"  id="no17">
+                                <td>17</td>
+                                <td>Cupid</td>
+                                <td>#FBB5E1</td>
+                            </tr>
+
+                            <tr onclick="showImage(17)"  id="no18">
+                                <td>18</td>
+                                <td>Curious Blue</td>
+                                <td>#2596E6</td>
+                            </tr>
+
+                            <tr onclick="showImage(18)"  id="no19">
+                                <td>19</td>
+                                <td>Deep Blush</td>
+                                <td>#E97D82</td>
+                            </tr>
+
+                            <tr onclick="showImage(19)" id="no20">
+                                <td>20</td>
+                                <td>Dodger Blue</td>
+                                <td>#1591F0</td>
+                            </tr>
+
+                            <tr onclick="showImage(20)" id="no21">
+                                <td>21</td>
+                                <td>French Lilac</td>
+                                <td>#EAC2EC</td>
+                            </tr>
+
+                            <tr onclick="showImage(21)" id="no22"> 
+                                <td>22</td>
+                                <td>French Pass</td>
+                                <td>#BBE4FD</td>
+                            </tr>
+
+                            <tr onclick="showImage(22)" id="no23">
+                                <td>23</td>
+                                <td>Froly</td>
+                                <td>#F77676</td>
+                            </tr>
+
+                            <tr onclick="showImage(23)" id="no24">
+                                <td>24</td>
+                                <td>Geraldine</td>
+                                <td>#F78C86</td>
+                            </tr>
+
+                            <tr onclick="showImage(24)" id="no25">
+                                <td>25</td>
+                                <td>Havelock Blue</td>
+                                <td>#4F8EE1</td>
+                            </tr>
+
+                            <tr onclick="showImage(25)" id="no26">
+                                <td>26</td>
+                                <td>Humming Bird</td>
+                                <td>#D1F2F9</td>
+                            </tr>
+
+                            <tr onclick="showImage(26)" id="no27">
+                                <td>27</td>
+                                <td>Java</td>
+                                <td>#23DAE7</td>
+                            </tr>
+
+                            <tr onclick="showImage(27)" id="no28">
+                                <td>28</td>
+                                <td>Lemon</td>
+                                <td>#FBE208</td>
+                            </tr>
+
+                            <tr onclick="showImage(28)" id="no29">
+                                <td>29</td>
+                                <td>Lightning Yellow</td>
+                                <td>#FDC221</td>
+                            </tr>
+
+                            <tr onclick="showImage(29)" id="no30">
+                                <td>30</td>
+                                <td>Malachite</td>
+                                <td>#13CE32</td>
+                            </tr>
+
+                            <tr onclick="showImage(30)" id="no31">
+                                <td>31</td>
+                                <td>Malibu</td>
+                                <td>#7BE3FD</td>
+                            </tr>
+
+                            <tr onclick="showImage(31)" id="no32">
+                                <td>32</td>
+                                <td>Mariner</td>
+                                <td>#277CDD</td>
+                            </tr>
+
+                            <tr onclick="showImage(32)" id="no33">
+                                <td>33</td>
+                                <td>Periwinkle</td>
+                                <td>#CBDBFE</td>
+                            </tr>
+
+                            <tr onclick="showImage(33)" id="no34">
+                                <td>34</td>
+                                <td>Picton Blue</td>
+                                <td>#4193F0</td>
+                            </tr>
+
+                            <tr onclick="showImage(34)" id="no35">
+                                <td>35</td>
+                                <td>Pig Pink</td>
+                                <td>#FDCAE1</td>
+                            </tr>
+
+                            <tr onclick="showImage(35)" id="no36">
+                                <td>36</td>
+                                <td>Pink</td>
+                                <td>#FEBAC4</td>
+                            </tr>
+
+                            <tr onclick="showImage(36)" id="no37">
+                                <td>37</td>
+                                <td>Reef</td>
+                                <td>#BDFE9D</td>
+                            </tr>
+
+                            <tr onclick="showImage(37)" id="no38">
+                                <td>38</td>
+                                <td>Ripe Lemon</td>
+                                <td>#F4D90F</td>
+                            </tr>
+
+                            <tr onclick="showImage(38)" id="no39">
+                                <td>39</td>
+                                <td>Royal Blue</td>
+                                <td>#3E79E7</td>
+                            </tr>
+
+                            <tr onclick="showImage(39)" id="no40">
+                                <td>40</td>
+                                <td>School Bus Yellow</td>
+                                <td>#FCDB05</td>
+                            </tr>
+
+                            <tr onclick="showImage(40)" id="no41">
+                                <td>41</td>
+                                <td>Seagull</td>
+                                <td>#7BD2E8</td>
+                            </tr>
+
+                            <tr onclick="showImage(41)" id="no42"> 
+                                <td>42</td>
+                                <td>Shamrock</td>
+                                <td>#32C88A</td>
+                            </tr>
+
+                            <tr onclick="showImage(42)" id="no43">
+                                <td>43</td>
+                                <td>Spray</td>
+                                <td>#7BEEEA</td>
+                            </tr>
+
+                            <tr onclick="showImage(43)" id="no44">
+                                <td>44</td>
+                                <td>Sulu</td>
+                                <td>#C5F07F</td>
+                            </tr>
+
+                            <tr onclick="showImage(44)" id="no45">
+                                <td>45</td>
+                                <td>Sundown</td>
+                                <td>#FEB6B9</td>
+                            </tr>
+
+                            <tr onclick="showImage(45)" id="no46">
+                                <td>46</td>
+                                <td>Supernova</td>
+                                <td>#FACA09</td>
+                            </tr>
+
+                            <tr onclick="showImage(46)" id="no47">
+                                <td>47</td>
+                                <td>Tickle Me Pink</td>
+                                <td>#FC7796</td>
+                            </tr>
+
+                            <tr onclick="showImage(47)" id="no48">
+                                <td>48</td>
+                                <td>Tranquil</td>
+                                <td>#E4FDFE</td>
+                            </tr>
+
+                            <tr onclick="showImage(48)" id="no49"> 
+                                <td>49</td>
+                                <td>Tropical Blue</td>
+                                <td>#CBE3F9</td>
+                            </tr>
+
+                            <tr onclick="showImage(49)" id="no50">
+                                <td>50</td>
+                                <td>Your Pink</td>
+                                <td>#FEBCC0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="drawing">
+
+                        <div class="show-drawings">
+                            <a href="#last" onclick="showDrawings()">
+                                doodles
+                            </a>
+
+                            <a href="#">
+                                top
+                            </a>
+                            
+                        </div>
+                        <div class="drawings" id="show">
+                            <img src="../svg/48.svg">
+                            <img src="../svg/36.svg">
+                            <img src="../svg/25.svg">
+                            <img src="../svg/1.svg">
+                            <img src="../svg/23.svg">
+                            <img src="../svg/46.svg">
+                            <img src="../svg/3.svg">
+                            <img src="../svg/6.svg">
+                            <img src="../svg/31.svg">
+                            <img src="../svg/30.svg">
+                            <img src="../svg/17.svg">
+                            <img src="../svg/5.svg">
+                            <img src="../svg/26.svg">
+                            <img src="../svg/33.svg">
+                            <img src="../svg/24.svg">
+                            <img src="../svg/41.svg">
+                            <img src="../svg/43.svg">
+                            <img src="../svg/11.svg">
+                            <img src="../svg/15.svg">
+                            <img src="../svg/13.svg">
+                            <img src="../svg/35.svg">
+                            <img src="../svg/37.svg">
+                            <img src="../svg/44.svg">
+                            <img src="../svg/19.svg">
+                            <img src="../svg/2.svg">
+                            <img src="../svg/47.svg">
+                            <img src="../svg/28.svg">
+                            <img src="../svg/16.svg">
+                            <img src="../svg/9.svg">
+                            <img src="../svg/32.svg">
+                            <img src="../svg/10.svg">
+                            <img src="../svg/7.svg">
+                            <img src="../svg/20.svg">
+                            <img src="../svg/12.svg">
+                            <img src="../svg/45.svg">
+                            <img src="../svg/42.svg">
+                            <img src="../svg/39.svg">
+                            <img src="../svg/14.svg">
+                            <img src="../svg/4.svg">
+                            <img src="../svg/27.svg">
+                            <img src="../svg/49.svg">
+                            <img src="../svg/38.svg">
+                            <img src="../svg/29.svg">
+                            <img src="../svg/34.svg">
+                            <img src="../svg/40.svg">
+                            <img src="../svg/18.svg">
+                            <img src="../svg/50.svg">
+                            <img src="../svg/21.svg">
+                            <img src="../svg/22.svg">
+                            <img id="last" src="../svg/8.svg">
+                        </div>
+                    </div>
+                </div>
+
+        
+            </div>
+        </main>
+
+        <script>
+            function showDrawings() {
+                var x = document.getElementById("show");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
+            }
+
+            var urls = ['1.html', '2.html', '3.html', '4.html', '5.html',
+                        '6.html', '7.html', '8.html', '9.html', '10.html',
+                        '11.html', '12.html', '13.html', '14.html', '15.html',
+                        '16.html', '17.html', '18.html', '19.html', '20.html',
+                        '21.html', '22.html', '23.html', '24.html', '25.html', 
+                        '26.html', '27.html', '28.html', '29.html', '30.html',
+                        '31.html', '32.html', '33.html', '34.html', '35.html', 
+                        '36.html', '37.html', '38.html', '39.html', '40.html', 
+                        '41.html', '42.html', '43.html', '44.html', '45.html', 
+                        '46.html', '47.html', '48.html', '49.html', '50.html'];
+
+            function showImage(num) {
+                var parent = document.getElementById('image');
+                var ifrm = document.createElement("iframe");
+                ifrm.setAttribute("src", `./doodles/${urls[num]}`);
+                ifrm.setAttribute('id', 'image-link');
+                ifrm.setAttribute('class', 'svg');
+                parent.appendChild(ifrm);
+                console.log(ifrm);
+            }
+
+            function removeSvg(self) {
+                document.querySelectorAll('.svg').forEach(function(a) {
+                    a.remove()
+                })
+            }
+
+
+            function prepareFrame() {
+                var parent = document.getElementById('image');
+                var ifrm = document.createElement("iframe");
+                ifrm.setAttribute("src", "#");
+                parent.appendChild(ifrm);
+            }
+        </script>
+
+        <script>              
+            // the solution is to first locate and remove all rowspan attributes, then repopulate / reclone values
+            $("table")
+            .tablesorter()
+            .bind("sortStart", function() {
+                var hasRowspans = false;
+
+                $("[rowspan]", this).each(function() {
+                hasRowspans = true;
+
+                var rowspan = parseInt($(this).attr("rowspan"));
+
+                // remove the rowspan attribute
+                $(this).removeAttr("rowspan");
+
+                var trIndex = $(this)
+                    .parentsUntil("table")
+                    .children("tr")
+                    .index($(this).parent());
+
+                var tdIndex = $(this)
+                    .parent()
+                    .children("td")
+                    .index(this);
+
+                // traverse each row, and repopulate / reclone the values for rows with rowspan
+                for (var tr = trIndex + 1; tr < trIndex + rowspan; ++tr) {
+                    var $row = $(this)
+                    .parentsUntil("table")
+                    .children("tr")
+                    .eq(tr);
+
+                    if (tdIndex == 0) $row.prepend($(this).clone());
+                    else
+                    $row
+                        .children("td")
+                        .eq(tdIndex - 1)
+                        .after($(this).clone());
+                }
+                });
+
+                if (hasRowspans) $(this).trigger("update");
+            });
+
+        </script>
+
+    </body>
+</html>

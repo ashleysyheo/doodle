@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/svg.css" />
+        <script src="../script.js"></script>
+        <title>Humming Bird</title>
+        <style>
+            .st0 {
+                stroke-dasharray: 1550;
+                stroke-dashoffset: 1550;
+            }
+
+            @keyframes dash {
+                0% {
+                    stroke-dashoffset: 1550;
+                    fill: transparent;
+                }
+
+                99% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                }
+
+                100% {
+                    stroke-dashoffset: 0;
+                    fill: #D1F2F9;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="base" class="inline-svg" data-src="../svg/47.svg"></div>
+        </main>
+
+    </body>
+</html>

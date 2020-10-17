@@ -1,0 +1,486 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: default;
+}
+
+::-webkit-scrollbar {
+    height: 3px;
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:  black;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+.desc {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.desc h3 {
+    position: absolute;
+    margin: 30px 30px;
+    font-size: 2em;
+}
+
+.lists {
+    position: absolute;
+    display: flex;
+    top: 15vw;
+    width: 100vw;
+    background-color: none;
+    z-index: 999;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100vw;
+    margin-bottom: 2em;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    border-left: none;
+    border-right: none;
+}
+
+th {
+    /*position: sticky;*/
+    top: 0;
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 10px 30px;
+    border-top: none;
+    background-color: none;
+}
+
+th:focus {
+    outline: 0;
+}
+
+th:hover {
+    background-color: rgba(224, 224, 224, 0.3);
+}
+
+#no1:hover {
+    background-color: rgba(174, 251, 196, .1);
+}
+
+#no2:hover {
+    background-color: rgba(239, 203, 239, .1);
+}
+
+#no3:hover {
+    background-color: rgba(168, 233, 253, .1);
+}
+
+#no4:hover {
+    background-color: rgba(232, 121, 121, .1);
+}
+
+#no5:hover {
+    background-color: rgba(251, 215, 186, .1);
+}
+
+#no6:hover {
+    background-color: rgba(112, 250, 177, .1);
+}
+
+#no7:hover {
+    background-color: rgba(17, 140, 240, .1);
+}
+
+#no8:hover {
+    background-color: rgba(253, 110, 110, .1);
+}
+
+#no9:hover {
+    background-color: rgba(1, 111, 254, .1);
+}
+
+#no10:hover {
+    background-color: rgba(6, 226, 234, .1);
+}
+
+#no11:hover {
+    background-color: rgba(251, 218, 28, .1);
+}
+
+#no12:hover {
+    background-color: rgba(244, 94, 104, .1);
+}
+
+#no13:hover {
+    background-color: rgba(251, 208, 221, .1);
+}
+
+#no14:hover {
+    background-color: rgba(152, 233, 94, .1);
+}
+
+#no15:hover {
+    background-color: rgba(254, 206, 205, .1);
+}
+
+#no16:hover {
+    background-color: rgba(255, 180, 201, .1);
+}
+
+#no17:hover {
+    background-color: rgba(251, 181, 225, .1);
+}
+
+#no18:hover {
+    background-color: rgba(37, 150, 230, .1);
+}
+
+#no19:hover {
+    background-color: rgba(233, 125, 130, .1);
+}
+
+#no20:hover {
+    background-color: rgba(21, 145, 240, .1);
+}
+
+#no21:hover {
+    background-color: rgba(234, 194, 236, .1);
+}
+
+#no22:hover {
+    background-color: rgba(187, 228, 253, .1);
+}
+
+#no23:hover {
+    background-color: rgba(247, 118, 118, .1);
+}
+
+#no24:hover {
+    background-color: rgba(247, 140, 134, .1);
+}
+
+#no25:hover {
+    background-color: rgba(79, 142, 225, .1);
+}
+
+#no26:hover {
+    background-color: rgba(209, 242, 249, .1);
+}
+
+#no27:hover {
+    background-color: rgba(35, 218, 231, .1);
+}
+
+#no28:hover {
+    background-color: rgba(251, 226, 8, .1);
+}
+
+#no29:hover {
+    background-color: rgba(253, 194, 33, .1);
+}
+
+#no30:hover {
+    background-color: rgba(19, 206, 50, .1);
+}
+
+#no31:hover {
+    background-color: rgba(123, 227, 253, .1);
+}
+
+#no32:hover {
+    background-color: rgba(39, 124, 221, .1);
+}
+
+#no33:hover {
+    background-color: rgba(203, 219, 254, .1);
+}
+
+#no34:hover {
+    background-color: rgba(65, 147, 240, .1);
+}
+
+#no35:hover {
+    background-color: rgba(253, 202, 225, .1);
+}
+
+#no36:hover {
+    background-color: rgba(254, 186, 196, .1);
+}
+
+#no37:hover {
+    background-color: rgba(189, 254, 157, .1);
+}
+
+#no38:hover {
+    background-color: rgba(244, 217, 15, .1);
+}
+
+#no39:hover {
+    background-color: rgba(62, 121, 231, .1);
+}
+
+#no40:hover {
+    background-color: rgba(252, 219, 5, .1);
+}
+
+#no41:hover {
+    background-color: rgba(123, 210, 232, .1);
+}
+
+#no42:hover {
+    background-color: rgba(50, 200, 138, .1);
+}
+
+#no43:hover {
+    background-color: rgba(123, 238, 234, .1);
+}
+
+#no44:hover {
+    background-color: rgba(197, 240, 127, .1);
+}
+
+#no45:hover {
+    background-color: rgba(254, 182, 185, .1);
+}
+
+#no46:hover {
+    background-color: rgba(250, 202, 9, .1);
+}
+
+#no47:hover {
+    background-color: rgba(252, 119, 150, .1);
+}
+
+#no48:hover {
+    background-color: rgba(228, 253, 254, .1);
+}
+
+#no49:hover {
+    background-color: rgba(203, 227, 249, .1);
+}
+
+#no50:hover {
+    background-color: rgba(254, 188, 192, .1);
+}
+
+td {
+    font-size: 1.1em;
+    padding: 20px 30px;
+}
+
+.vl {
+    position: absolute;
+    left: calc(50vw - 1px);
+    height: 100vh;
+    border-left: 2px solid black;
+    top: 0px;
+    z-index: 4;
+}
+
+#no1 {
+    top: -15px;
+}
+
+
+#no2 {
+    top: 35px;
+}
+
+#image {
+    position: fixed;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+}
+
+#image iframe {
+    position: absolute;
+    z-index: -99;
+    overflow: hidden;
+}
+
+#sheet {
+    height: 100vh;
+    width: 50vw;
+}
+
+#image-link {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100vh;
+    height: 100vh;
+    border: none;
+    overflow: hidden;
+}
+
+.st0 {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+}
+
+.animation {
+    animation: dash 8s linear forwards;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1200;
+        fill: none;
+    }
+
+    99% {
+        stroke-dashoffset: 0;
+        fill: none;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: #016FFE;
+    }
+}
+
+.drawing {
+    position: absolute;
+    bottom: calc(-30px - 1.3em);
+    width: 100vw;
+    height: calc(60px + 1.3em);
+    background-color: white;
+}
+
+.show-drawings {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+.show-drawings a {
+    text-decoration: none;
+    color: black;
+}
+
+.drawings {
+    display: none;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: center;
+    width: 100vw;
+    margin-bottom: 20px;
+}
+
+.drawings img {
+    width: 160px;
+    height: 160px;
+    margin: 4px 0;
+}
+
+@media screen and (max-width: 1440px) {
+    .drawings img {
+        width: 140px;
+        height: 140px;
+        margin: 7px 0;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .drawing {
+        bottom: calc(-30px - 1.5em);
+        height: calc(60px + 1.5em);
+    }
+
+    .drawings img {
+        width: 130px;
+        height: 130px;
+        margin: 4px 0;
+    }
+
+    .drawings {
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .drawing {
+        bottom: -2469px;
+        height: calc(60px + 1.5em);
+    }
+
+    .drawings img {
+        width: 100px;
+        height: 100px;
+        margin: 7px 0;
+    }
+
+    #image-link {
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vw;
+    }
+
+    #nothing {
+        font-size: 2.4em;
+    }
+
+    .lists {
+        top: 25vw;
+        height: calc(100vh - 25vw);
+    }
+  }
+
+@media screen and (max-width: 450px) {
+    .drawing {
+        display: none;
+    }
+
+    #nothing {
+        font-size: 1.7em;
+    }
+
+    th {
+        font-size: .6em;
+    }
+
+    td {
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-height: 590px) {
+    .lists {
+        top: 22.5%;
+        height: calc(100vh - 29.2%);
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .lists {
+        top: 22.5%;
+        height: calc(100vh - 28.7%);
+    }
+}
+
+
+@media screen and (max-height: 850px) {
+    .lists {
+        top: 22.5%;
+        height: calc(100vh - 32.2%);
+    }
+}
